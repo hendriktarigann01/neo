@@ -5,8 +5,12 @@ import { MessageCircle, Send, ChevronDown } from "lucide-react";
 
 const productOptions = [
   "LED Poster Display",
-  "Digital Menu Board",
-  "Retail Shelf Screen",
+  "Digital Signage",
+  "Interactive Dashboard",
+  "Creative Visual LED",
+  "LED Outdoor",
+  "LED Indoor",
+  "LED Transparent",
   "LED Video Wall",
   "Not Sure (Need Recommendation)",
 ];
@@ -18,17 +22,12 @@ interface ContactFormProps {
   waHref: string;
 }
 
-export function ContactForm({
-  isInView,
-  form,
-  onChange,
-  waHref,
-}: ContactFormProps) {
+export function ContactForm({ isInView, form, onChange, waHref }: ContactFormProps) {
   const inputClass =
-    "w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-neo-light/25 focus:outline-none focus:border-neo-yellow/50 transition-colors";
+    "w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-neo-light-yellow/25 focus:outline-none focus:border-neo-yellow/50 transition-colors";
 
   const labelClass =
-    "text-neo-light/45 text-xs font-medium tracking-wide uppercase block mb-2";
+    "text-neo-light-yellow/45 text-xs font-medium tracking-wide uppercase block mb-2";
 
   return (
     <motion.div
@@ -77,7 +76,7 @@ export function ContactForm({
           </select>
           <ChevronDown
             size={16}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-neo-light/30 pointer-events-none"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-neo-light-yellow/30 pointer-events-none"
           />
         </div>
       </div>
@@ -101,10 +100,7 @@ export function ContactForm({
       >
         <MessageCircle size={20} />
         Send via WhatsApp
-        <Send
-          size={16}
-          className="group-hover:translate-x-1 transition-transform"
-        />
+        <Send size={16} className="group-hover:translate-x-1 transition-transform" />
       </a>
     </motion.div>
   );
