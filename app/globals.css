@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neo-yellow: #ffec3d;
+  --neo-gold: #ffd600;
+  --neo-light-yellow: #ffface;
+  --neo-black: #000000;
+  --neo-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffec3d;
+  border-radius: 2px;
+}
+
+/* Yellow glow text utility */
+.text-glow {
+  text-shadow:
+    0 0 20px #ffec3d99,
+    0 0 60px #ffec3d44;
+}
+
+.box-glow {
+  box-shadow:
+    0 0 30px #ffec3d33,
+    0 0 80px #ffec3d11,
+    inset 0 0 30px #ffec3d08;
+}
+
+.box-glow-strong {
+  box-shadow:
+    0 0 20px #ffec3d66,
+    0 0 60px #ffec3d33,
+    0 0 120px #ffec3d11;
+}
+
+/* Pattern background */
+.pattern-bg {
+  background-image: url("/pattern-neo.png");
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  opacity: 0.04;
+}
+
+/* 3D perspective helpers */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
