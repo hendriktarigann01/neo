@@ -15,7 +15,7 @@ export function HeroBadges({ springX, springY }: HeroBadgesProps) {
 
   return (
     <>
-      {/* Badge A: Plug & Play */}
+      {/* Badge A */}
       <motion.div
         style={{ x: bA.x, y: bA.y }}
         initial={{ opacity: 0, scale: 0.7 }}
@@ -26,15 +26,15 @@ export function HeroBadges({ springX, springY }: HeroBadgesProps) {
         Plug &amp; Play ✦
       </motion.div>
 
-      {/* Badge B: Price */}
+      {/* Badge B */}
       <motion.div
         style={{ x: bB.x, y: bB.y }}
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.3, duration: 0.6 }}
-        className="absolute bottom-[18%] right-[4%] bg-neo-yellow text-black text-[10px] font-black px-3 py-1.5 rounded-full tracking-wide shadow-lg z-20"
+        className="absolute bottom-[40%] right-[20%] bg-neo-yellow text-black text-[10px] font-black px-3 py-1.5 rounded-full tracking-wide shadow-lg z-20"
       >
-        From Rp 2.9jt
+        Smart Economy Display ✦
       </motion.div>
     </>
   );

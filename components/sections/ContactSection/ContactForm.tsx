@@ -3,17 +3,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Send, ChevronDown } from "lucide-react";
 
-const productOptions = [
-  "LED Poster Display",
-  "Digital Signage",
-  "Interactive Dashboard",
-  "Creative Visual LED",
-  "LED Outdoor",
-  "LED Indoor",
-  "LED Transparent",
-  "LED Video Wall",
-  "Not Sure (Need Recommendation)",
-];
+const productOptions = ["Digital Signage", "LED Indoor"];
 
 interface ContactFormProps {
   isInView: boolean;
@@ -22,7 +12,12 @@ interface ContactFormProps {
   waHref: string;
 }
 
-export function ContactForm({ isInView, form, onChange, waHref }: ContactFormProps) {
+export function ContactForm({
+  isInView,
+  form,
+  onChange,
+  waHref,
+}: ContactFormProps) {
   const inputClass =
     "w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-neo-light-yellow/25 focus:outline-none focus:border-neo-yellow/50 transition-colors";
 
@@ -100,7 +95,10 @@ export function ContactForm({ isInView, form, onChange, waHref }: ContactFormPro
       >
         <MessageCircle size={20} />
         Send via WhatsApp
-        <Send size={16} className="group-hover:translate-x-1 transition-transform" />
+        <Send
+          size={16}
+          className="group-hover:translate-x-1 transition-transform"
+        />
       </a>
     </motion.div>
   );

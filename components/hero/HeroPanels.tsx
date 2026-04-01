@@ -64,11 +64,6 @@ function ProductScreen({
 }: ProductScreenProps) {
   return (
     <div className="relative w-full h-full overflow-hidden bg-black">
-      {/* 
-        Image asli 233x200 — pakai object-cover dengan posisi center
-        Container tiap panel sudah mengikuti ratio 233:200 (≈ aspect-[233/200])
-        sehingga tidak ada distorsi gepeng
-      */}
       <Image
         src={src}
         alt={title}
@@ -150,25 +145,8 @@ export function HeroPanels({
         Panel E  → w-[128px]  h-[110px]
       -->
 
-      {/* ── Panel D — tiny, top center — LED Transparent ── */}
-      <motion.div
-        style={{ x: pD.x, y: yD }}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.9, duration: 0.8 }}
-        className="absolute top-[7%] left-[38%] z-10 w-[116px] h-[100px]"
-      >
-        <PanelFrame>
-          <ProductScreen
-            src="/products/led-transparent.png"
-            title="Transparent LED"
-            sub="See through Display"
-            scanDelay="2.5s"
-          />
-        </PanelFrame>
-      </motion.div>
 
-      {/* ── Panel A — large, left — LED Poster ── */}
+      {/* ── Panel A */}
       <motion.div
         style={{ x: pA.x, y: yA }}
         initial={{ opacity: 0, x: -60 }}
@@ -178,35 +156,33 @@ export function HeroPanels({
       >
         <PanelFrame>
           <ProductScreen
-            src="/products/led-poster.png"
-            title="LED Poster"
-            sub="Presenting Ideas Through Poster"
-            badge="Best Seller"
+            src="/products/led-indoor.webp"
+            title="LED Indoor"
+            sub="Fine-pitch · Seamless · Vivid"
             scanDelay="0s"
           />
         </PanelFrame>
       </motion.div>
 
-      {/* ── Panel B — medium, right top — Video Wall ── */}
-      <motion.div
+      {/* ── Panel B  */}
+      {/* <motion.div
         style={{ x: pB.x, y: yB }}
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[6%] right-[4%] z-10 w-[163px] h-[140px] lg:w-[186px] lg:h-[160px]"
+        className="absolute top-[20%] right-[4%] z-10 w-[163px] h-[140px] lg:w-[186px] lg:h-[160px]"
       >
         <PanelFrame>
           <ProductScreen
-            src="/products/video-wall.png"
-            title="Video Wall"
-            sub="Power Your Message with Video Walls"
-            badge="Enterprise"
-            scanDelay="1s"
+            src="/products/interactive-whiteboard.webp"
+            title="Interactive Whiteboard"
+            sub="Touch · Engage · Present"
+            scanDelay="0.5s"
           />
         </PanelFrame>
-      </motion.div>
+      </motion.div> */}
 
-      {/* ── Panel C — small, bottom right — Digital Signage ── */}
+      {/* ── Panel C */}
       <motion.div
         style={{ x: pC.x, y: yC }}
         initial={{ opacity: 0, y: 40 }}
@@ -216,31 +192,31 @@ export function HeroPanels({
       >
         <PanelFrame>
           <ProductScreen
-            src="/products/digital-signage.png"
-            title="Digital Signage"
-            sub="Indoor · Outdoor"
+            src="/products/digital-signage.webp"
+            title="Stand Floor"
+            sub="Portrait · Plug & Play"
             scanDelay="1.8s"
           />
         </PanelFrame>
       </motion.div>
 
-      {/* ── Panel E — bottom left — LED Indoor ── */}
-      <motion.div
+      {/* ── Panel D  ── */}
+      {/* <motion.div
         style={{ x: pA.x, y: useTransform(pA.y, (v) => v + floatC.get()) }}
         initial={{ opacity: 0, x: -30, y: 30 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ delay: 0.75, duration: 0.9 }}
-        className="absolute bottom-[10%] left-[3%] z-10 w-[128px] h-[110px]"
+        className="absolute bottom-[10%] left-[3%] z-10 w-[158px] h-[130px]"
       >
         <PanelFrame>
           <ProductScreen
-            src="/products/led-indoor.png"
-            title="LED Indoor"
-            sub="High Brightness"
-            scanDelay="0.5s"
+            src="/products/video-wall.webp"
+            title="Video Wall"
+            sub="Large Format · High Impact"
+            scanDelay="1s"
           />
         </PanelFrame>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 }

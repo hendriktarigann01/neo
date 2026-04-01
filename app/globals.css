@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --neo-yellow: #ffec3d;
   --neo-gold: #ffd600;

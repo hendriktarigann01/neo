@@ -18,17 +18,6 @@ export function HeroText({ springX, springY }: HeroTextProps) {
       style={{ x: text.x, y: text.y }}
       className="relative z-10 text-center max-w-2xl mx-auto px-6 pt-28"
     >
-      {/* Tag badge */}
-      <motion.div
-        initial={{ opacity: 0, y: -12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="inline-flex items-center gap-2 border border-neo-yellow/25 bg-neo-yellow/5 text-neo-yellow text-[10px] font-bold px-4 py-2 rounded-full mb-8 tracking-[0.25em] uppercase"
-      >
-        <Zap size={10} fill="#ffec3d" />
-        LED · LCD · Digital Signage
-      </motion.div>
-
       {/* Headline */}
       <motion.h1
         initial={{ opacity: 0, y: 24 }}
