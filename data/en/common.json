@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "value": "Why NEO",
+    "solution": "Solutions",
+    "flow": "How It Works",
+    "product": "Products",
+    "contact": "Consultation"
+  },
+  "hero": {
+    "headline1": "Smart Display",
+    "headline2": "Solutions",
+    "headline3": "for Every Business Space",
+    "subtitle": "Transform your environment with our custom-designed integrated LED and LCD solutions — we deliver a complete visual ecosystem tailored to your space.",
+    "ctaPrimary": "Explore Bundle Packages",
+    "ctaSecondary": "Consultation"
+  },
+  "value": {
+    "tag": "Value",
+    "title1": "Integrated Visual Systems,",
+    "title2": "Designed for Impact",
+    "desc": "Every environment requires a different approach. We create tailored visual systems by combining display technology, spatial design, and content strategy into one cohesive solution.",
+    "items": [
+      {
+        "title": "Tailored to Your Space & Needs",
+        "desc": "Every solution is carefully adapted to your environment, ensuring optimal placement, functionality, and visual impact."
+      },
+      {
+        "title": "Seamless Technology Integration",
+        "desc": "LED, LCD, and supporting systems work together as one unified ecosystem without complexity."
+      },
+      {
+        "title": "Scalable & Future-Ready",
+        "desc": "Built with flexibility in mind, allowing your system to grow and evolve alongside your business."
+      },
+      {
+        "title": "Designed for Real-World Use Cases",
+        "desc": "Every implementation is grounded in practical needs, ensuring relevance, usability, and measurable impact."
+      }
+    ]
+  },
+  "solution": {
+    "tag": "Solution",
+    "title1": "Solutions Built as Complete",
+    "title2": "Visual Ecosystems",
+    "desc": "Each solution is structured as a curated bundle combining LED, LCD, and supporting systems into a unified experience designed for specific environments.",
+    "tabs": [
+      {
+        "id": "cafe",
+        "label": "Cafe & Shop",
+        "title": "Dynamic Menu & Retail Experience",
+        "desc": "Capture attention and drive sales with vibrant digital menu boards and promotional displays tailored to your F&B or retail environment.",
+        "products": [
+          { "name": "LCD Menu Board", "sub": "Dynamic menu & promotions" },
+          {
+            "name": "LED Poster Display",
+            "sub": "Storefront & window advertising"
+          }
+        ]
+      },
+      {
+        "id": "meeting",
+        "label": "Meeting Room",
+        "title": "Smart Meeting & Collaboration Space",
+        "desc": "Elevate productivity with interactive displays and seamless AV integration. Every meeting space becomes a high-performance communication hub.",
+        "products": [
+          {
+            "name": "Interactive LED Panel",
+            "sub": "Wireless presentation & collaboration"
+          },
+          { "name": "LCD Display", "sub": "Room scheduling & status board" }
+        ]
+      },
+
+      {
+        "id": "station",
+        "label": "Station",
+        "title": "Transportation & Public Information Hub",
+        "desc": "Enable clear, real-time communication in high-traffic environments through strategically placed digital displays that deliver information and content seamlessly.",
+        "products": [
+          {
+            "name": "LED Indoor Display",
+            "sub": "Real-time schedule & information board"
+          },
+          { "name": "LCD Floor Stand", "sub": "Advertising & announcements" }
+        ]
+      },
+      {
+        "id": "retail",
+        "label": "Retail",
+        "title": "Immersive Retail Visual Experience",
+        "desc": "Transform your retail floor with large-format LED displays and strategic digital signage that guides customers and amplifies your brand.",
+        "products": [
+          {
+            "name": "LED Video Wall",
+            "sub": "Brand storytelling & product showcase"
+          },
+          {
+            "name": "LCD Standfloor",
+            "sub": "In-aisle promotions & wayfinding"
+          }
+        ]
+      }
+    ]
+  },
+  "flow": {
+    "tag": "How It Works",
+    "title1": "A Structured Approach",
+    "title2": "to",
+    "title3": "Every Solution",
+    "desc": "From initial concept to final implementation, every step is designed to ensure a seamless and effective visual system.",
+    "steps": [
+      {
+        "title": "Discovery",
+        "desc": "Understanding space, needs, and objectives"
+      },
+      { "title": "Design", "desc": "Crafting the right visual ecosystem" },
+      {
+        "title": "Integration",
+        "desc": "Combining display, content, and infrastructure"
+      },
+      { "title": "Deployment", "desc": "Professional installation" },
+      { "title": "Optimization", "desc": "Ongoing support and enhancement" }
+    ]
+  },
+  "product": {
+    "tag": "Product",
+    "title1": "Display Technologies That",
+    "title2": "Power Every Solution",
+    "desc": "A range of advanced display technologies designed to support various applications and environments.",
+    "tabLed": "LED Display Solution",
+    "tabLcd": "LCD Display Solution",
+    "led": [
+      {
+        "name": "Indoor LED Fixed Installation",
+        "specs": ["P1.25", "P1.5", "P1.8", "P2.5", "P3.0"]
+      },
+      {
+        "name": "Outdoor LED Fixed Installation",
+        "specs": ["P1.25", "P1.5", "P1.8", "P2.5", "P3.0"]
+      }
+    ],
+    "lcd": [
+      {
+        "name": "Standfloor LCD Display",
+        "specs": ["32\"", "43\"", "55\"", "65\""]
+      },
+      {
+        "name": "Interactive LCD Panel",
+        "specs": ["55\"", "65\"", "75\"", "86\""]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start Designing Your Visual Experience",
+    "desc": "Share your requirements and explore how a tailored visual system can transform your space.",
+    "button": "Get Consultation"
+  },
+  "footer": {
+    "tagline": "Architecting Tomorrow's Legacy",
+    "copyright": "© 2026 NEO. All rights reserved.",
+    "links": ["Why Neo", "Solutions", "How It Works", "Products", "Consultation"]
+  }
+}

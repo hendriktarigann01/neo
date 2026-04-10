@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "value": "Mengapa NEO",
+    "solution": "Solusi",
+    "flow": "Cara Kerja",
+    "product": "Produk",
+    "contact": "Konsultasi"
+  },
+  "hero": {
+    "headline1": "Solusi Display",
+    "headline2": "Cerdas",
+    "headline3": "untuk Setiap Ruang Bisnis",
+    "subtitle": "Transformasi lingkungan Anda dengan solusi LED dan LCD terintegrasi yang kami rancang khusus — ekosistem visual lengkap sesuai kebutuhan ruang Anda.",
+    "ctaPrimary": "Jelajahi Paket Bundle",
+    "ctaSecondary": "Konsultasi"
+  },
+  "value": {
+    "tag": "Nilai",
+    "title1": "Sistem Visual Terintegrasi,",
+    "title2": "Dirancang untuk Dampak",
+    "desc": "Setiap lingkungan membutuhkan pendekatan berbeda. Kami menciptakan sistem visual yang disesuaikan dengan menggabungkan teknologi display, desain spasial, dan strategi konten menjadi satu solusi yang kohesif.",
+    "items": [
+      {
+        "title": "Disesuaikan dengan Ruang & Kebutuhan Anda",
+        "desc": "Setiap solusi diadaptasi secara cermat untuk lingkungan Anda, memastikan penempatan, fungsionalitas, dan dampak visual yang optimal."
+      },
+      {
+        "title": "Integrasi Teknologi yang Mulus",
+        "desc": "LED, LCD, dan sistem pendukung bekerja bersama sebagai satu ekosistem terpadu tanpa kompleksitas."
+      },
+      {
+        "title": "Skalabel & Siap Masa Depan",
+        "desc": "Dibangun dengan fleksibilitas, memungkinkan sistem Anda tumbuh dan berkembang seiring bisnis Anda."
+      },
+      {
+        "title": "Dirancang untuk Kasus Penggunaan Nyata",
+        "desc": "Setiap implementasi berakar pada kebutuhan praktis, memastikan relevansi, kegunaan, dan dampak yang terukur."
+      }
+    ]
+  },
+  "solution": {
+    "tag": "Solusi",
+    "title1": "Solusi Dibangun sebagai",
+    "title2": "Ekosistem Visual Lengkap",
+    "desc": "Setiap solusi disusun sebagai paket terkurasi yang menggabungkan LED, LCD, dan sistem pendukung menjadi pengalaman terpadu untuk lingkungan tertentu.",
+    "tabs": [
+      {
+        "id": "cafe",
+        "label": "Kafe & Toko",
+        "title": "Menu Digital & Pengalaman Ritel Dinamis",
+        "desc": "Tampilkan menu dan promosi dengan papan digital yang menarik perhatian dan mendorong penjualan.",
+        "products": [
+          { "name": "LCD Menu Board", "sub": "Menu dinamis & promosi" },
+          { "name": "LED Poster Display", "sub": "Iklan etalase & jendela" }
+        ]
+      },
+      {
+        "id": "meeting",
+        "label": "Ruang Rapat",
+        "title": "Ruang Rapat & Kolaborasi Cerdas",
+        "desc": "Tingkatkan produktivitas dengan display interaktif dan integrasi AV yang mulus di setiap ruang rapat.",
+        "products": [
+          {
+            "name": "Panel LED Interaktif",
+            "sub": "Presentasi & kolaborasi nirkabel"
+          },
+          { "name": "LCD Display", "sub": "Penjadwalan ruangan & papan status" }
+        ]
+      },
+      {
+        "id": "station",
+        "label": "Stasiun",
+        "title": "Hub Informasi Transportasi & Publik",
+        "desc": "Komunikasi real-time yang jelas di lingkungan lalu lintas tinggi melalui display digital yang ditempatkan strategis.",
+        "products": [
+          {
+            "name": "LED Display Indoor",
+            "sub": "Papan jadwal & informasi real-time"
+          },
+          { "name": "LCD Floor Stand", "sub": "Iklan & pengumuman" }
+        ]
+      },
+      {
+        "id": "retail",
+        "label": "Ritel",
+        "title": "Pengalaman Visual Ritel yang Imersif",
+        "desc": "Transformasi lantai ritel Anda dengan LED display format besar dan signage digital strategis.",
+        "products": [
+          {
+            "name": "LED Video Wall",
+            "sub": "Brand storytelling & showcase produk"
+          },
+          { "name": "LCD Standfloor", "sub": "Promosi lorong & panduan arah" }
+        ]
+      }
+    ]
+  },
+  "flow": {
+    "tag": "Cara Kerja",
+    "title1": "Pendekatan Terstruktur",
+    "title2": "untuk",
+    "title3": "Setiap Solusi",
+    "desc": "Dari konsep awal hingga implementasi akhir, setiap langkah dirancang untuk memastikan sistem visual yang mulus dan efektif.",
+    "steps": [
+      { "title": "Penemuan", "desc": "Memahami ruang, kebutuhan, dan tujuan" },
+      { "title": "Desain", "desc": "Merancang ekosistem visual yang tepat" },
+      {
+        "title": "Integrasi",
+        "desc": "Menggabungkan display, konten, dan infrastruktur"
+      },
+      { "title": "Penerapan", "desc": "Instalasi profesional" },
+      {
+        "title": "Optimalisasi",
+        "desc": "Dukungan dan peningkatan berkelanjutan"
+      }
+    ]
+  },
+  "product": {
+    "tag": "Produk",
+    "title1": "Teknologi Display yang",
+    "title2": "Mendukung Setiap Solusi",
+    "desc": "Rangkaian teknologi display canggih yang dirancang untuk mendukung berbagai aplikasi dan lingkungan.",
+    "tabLed": "Solusi Display LED",
+    "tabLcd": "Solusi Display LCD",
+    "led": [
+      {
+        "name": "Instalasi Tetap LED Indoor",
+        "specs": ["P1.25", "P1.5", "P1.8", "P2.5", "P3.0"]
+      },
+      {
+        "name": "Instalasi Tetap LED Outdoor",
+        "specs": ["P1.25", "P1.5", "P1.8", "P2.5", "P3.0"]
+      }
+    ],
+    "lcd": [
+      {
+        "name": "LCD Display Standfloor",
+        "specs": ["32\"", "43\"", "55\"", "65\""]
+      },
+      {
+        "name": "Panel LCD Interaktif",
+        "specs": ["55\"", "65\"", "75\"", "86\""]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Mulai Rancang Pengalaman Visual Anda",
+    "desc": "Bagikan kebutuhan Anda dan temukan bagaimana sistem visual yang disesuaikan dapat mentransformasi ruang Anda.",
+    "button": "Dapatkan Konsultasi"
+  },
+  "footer": {
+    "tagline": "Membangun Warisan Masa Depan",
+    "copyright": "© 2026 NEO. Hak cipta dilindungi.",
+    "links": ["Mengapa Neo", "Solusi", "Cara Kerja", "Produk", "Konsultasi"]
+  }
+}

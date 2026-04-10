@@ -7,8 +7,9 @@
   --neo-yellow: #ffec3d;
   --neo-gold: #ffd600;
   --neo-light-yellow: #ffface;
-  --neo-black: #000000;
+  --neo-black: #02030A;
   --neo-white: #ffffff;
+  --neo-dark-gray: #191919;
 }
 
 * {
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  background: #000000;
+  background: #02030A;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -60,19 +61,7 @@ body {
     0 0 120px #ffec3d11;
 }
 
-/* Pattern background */
-.pattern-bg {
-  background-image: url("/pattern-neo.png");
-  background-size: 300px 300px;
-  background-repeat: repeat;
-  opacity: 0.04;
-}
-
-/* 3D perspective helpers */
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.perspective-1500 {
-  perspective: 1500px;
+@keyframes loadBar {
+  from { width: 0% }
+  to   { width: 100% }
 }
