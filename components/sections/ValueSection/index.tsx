@@ -32,7 +32,7 @@ export function ValueSection() {
             <div className="flex flex-col md:flex-row justify-between gap-6 w-full">
               <h2 className="max-w-sm font-display font-medium text-2xl md:text-3xl lg:text-4xl leading-tight text-white">
                 {t("title1")}
-                <span className="text-neo-yellow">{t("title2")}</span>
+                <span className="text-neo-yellow"> {t("title2")}</span>
               </h2>
 
               <div className="max-w-md text-neo-white text-sm leading-relaxed">

@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ValueSection } from "@/components/sections/ValueSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { FlowSection } from "@/components/sections/FlowSection";
-import { ProductSection } from "@/components/sections/ProductSection";
+// import { ProductSection } from "@/components/sections/ProductSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { Footer } from "@/components/layout/Footer";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <ValueSection />
       <SolutionSection />
       <FlowSection />
-      <ProductSection />
+      {/* <ProductSection /> */}
       <CTASection />
       <Footer />
     </main>

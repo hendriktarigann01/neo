@@ -198,10 +198,10 @@ function InfoPin({
                 left: "50%",
               }}
             >
-              <p className="text-white text-[11px] md:text-xs font-bold mb-0.5">
+              <p className="text-white text-xs md:text-xs font-bold mb-0.5">
                 {product.name}
               </p>
-              <p className="text-neo-white/50 text-[9px] md:text-[10px]">
+              <p className="text-neo-white/50 text-xs md:text-[10px]">
                 {product.sub}
               </p>
             </motion.div>
@@ -272,19 +272,25 @@ export function SolutionSection() {
       id="solution"
       className="py-28 px-6 bg-neo-dark-gray overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto space-y-10">
-        {/* Header */}
-        <div className="grid gap-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid gap-12 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
+            className="lg:col-span-2"
           >
             <span className="text-neo-yellow text-xs font-bold tracking-[0.3em] uppercase block mb-5">
               {t("tag")}
             </span>
-            <div className="max-w-md text-neo-white text-sm leading-relaxed">
-              {t("desc")}
+            <div className="flex flex-col md:flex-row justify-between gap-6 w-full">
+              <h2 className="max-w-sm font-display font-medium text-2xl md:text-3xl lg:text-4xl leading-tight text-white">
+                {t("title1")}
+                <span className="text-neo-yellow"> {t("title2")}</span>
+              </h2>
+              <div className="max-w-md text-neo-white text-sm leading-relaxed">
+                {t("desc")}
+              </div>
             </div>
           </motion.div>
         </div>
@@ -324,7 +330,7 @@ export function SolutionSection() {
 
         {/* Body */}
         <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-32 items-start">
-          {/* Accordion */}
+       
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -354,7 +360,6 @@ export function SolutionSection() {
             </AnimatePresence>
           </motion.div>
 
-          {/* Image + pins */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
