@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://neodisplay.id"),
-  title: "NEO Display — High-Impact Visuals, Small-Business Budget",
+  title: "NEO Display",
   description:
     "LED & LCD display solutions for retail and SMEs. Plug-and-play, affordable, maximum ROI.",
   keywords: [

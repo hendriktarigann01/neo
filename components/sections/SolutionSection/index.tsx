@@ -4,53 +4,61 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import GroupDropdown from "@/components/ui/dropdown";
 import {
   Coffee,
   Users,
   TrainFront,
   ShoppingCart,
+  GraduationCap,
+  Heart,
+  Church,
+  MapPin,
+  Ticket,
+  Building2,
   Plus,
   Minus,
 } from "lucide-react";
 
-const LOAD_DURATION = 10000;
+const LOAD_DURATION = 1000000;
 const CHIP_DURATION = 5000;
-const SOLUTION_IMAGES: Record<string, string> = {
-  station: "/solutions/station.webp",
-  meeting: "/solutions/meeting.webp",
-  cafe: "/solutions/cafe.webp",
-  retail: "/solutions/retail.webp",
-};
 
 const TAB_ICONS: Record<string, React.ElementType> = {
-  cafe: Coffee,
-  meeting: Users,
-  station: TrainFront,
+  corporate: Building2,
+  education: GraduationCap,
+  coffee: Coffee,
+  worship: Church,
   retail: ShoppingCart,
+  health: Heart,
+  transportation: TrainFront,
+  lobby: MapPin,
+  ticketing: Ticket,
 };
 
-const INFO_BUTTONS = [
-  {
-    icon: "/icons/megaphone.svg",
-    bg: "#BBF7D0",
-    dot: "#4ADE80",
-    pos: "top-[10%] left-[44%]",
-  },
-  {
-    icon: "/icons/food.svg",
-    bg: "#BFDBFE",
-    dot: "#60A5FA",
-    pos: "top-[25%] left-[15%]",
-  },
-] as const;
+type InfoButton = {
+  icon: string;
+  bg: string;
+  dot: string;
+  top: string;
+  left: string;
+};
 
 type Tab = {
   id: string;
   label: string;
-  title: string;
   desc: string;
   products: { name: string; sub: string }[];
+  infoButtons: InfoButton[];
+  image: string;
 };
+
+type Group = {
+  id: string;
+  label: string;
+  tabs: Tab[];
+};
+
+// ─── LoadingBar ───────────────────────────────────────────────────────────────
 
 function LoadingBar({ runKey, paused }: { runKey: number; paused: boolean }) {
   return (
@@ -66,6 +74,8 @@ function LoadingBar({ runKey, paused }: { runKey: number; paused: boolean }) {
     </div>
   );
 }
+
+// ─── TabItem ──────────────────────────────────────────────────────────────────
 
 function TabItem({
   tab,
@@ -135,50 +145,69 @@ function TabItem({
   );
 }
 
+// ─── InfoPin ──────────────────────────────────────────────────────────────────
+
 function InfoPin({
   config,
   product,
   isOpen,
   onToggle,
 }: {
-  config: (typeof INFO_BUTTONS)[number];
+  config: InfoButton;
   product: { name: string; sub: string };
   isOpen: boolean;
   onToggle: () => void;
 }) {
   return (
-    <div className={`absolute ${config.pos} z-20`}>
-      <button onClick={onToggle}>
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center"
-          style={{ backgroundColor: config.bg }}
-        >
+    <div
+      className="absolute flex flex-col items-center"
+      style={{ top: config.top, left: config.left }}
+    >
+      <div className="relative inline-block">
+        {/* button */}
+        <button onClick={onToggle}>
           <div
-            className="w-7 h-7 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: config.dot }}
+            className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center"
+            style={{ backgroundColor: config.bg }}
           >
-            <Image src={config.icon} alt="" width={22} height={22} />
+            <div
+              className="w-5 h-5 md:w-7 md:h-7 rounded-full flex items-center justify-center"
+              style={{ backgroundColor: config.dot }}
+            >
+              <Image
+                src={config.icon}
+                alt=""
+                width={18}
+                height={18}
+                className="md:w-[22px] md:h-[22px]"
+              />
+            </div>
           </div>
-        </div>
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 6, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 6, scale: 0.95 }}
-            transition={{ duration: 0.25 }}
-            className="absolute top-full mt-2 z-30 bg-[#262412] rounded-xl px-4 py-3 w-[190px]"
-            style={{ left: "calc(50% - 90px)" }}
-          >
-            <p className="text-white text-xs font-bold mb-0.5">
-              {product.name}
-            </p>
-            <p className="text-neo-white/50 text-[10px]">{product.sub}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        </button>
+        <AnimatePresence>
+          {isOpen && (
+            // isi
+            <motion.div
+              initial={{ opacity: 0, y: 6, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 6, scale: 0.95 }}
+              transition={{ duration: 0.25 }}
+              className="absolute top-full mt-2 z-[99] bg-[#262412] rounded-xl px-3 py-2 md:px-4 md:py-3 w-max max-w-[220px]"
+              style={{
+                translateX: "-50%",
+                left: "50%",
+              }}
+            >
+              <p className="text-white text-[11px] md:text-xs font-bold mb-0.5">
+                {product.name}
+              </p>
+              <p className="text-neo-white/50 text-[9px] md:text-[10px]">
+                {product.sub}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
@@ -190,32 +219,28 @@ export function SolutionSection() {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const tabs = t.raw("tabs") as Tab[];
+  const groups = t.raw("groups") as Group[];
 
-  const [activeId, setActiveId] = useState(tabs[0].id);
+  const [activeGroupId, setActiveGroupId] = useState(groups[0].id);
+  const [activeTabId, setActiveTabId] = useState(groups[0].tabs[0].id);
   const [loadKey, setLoadKey] = useState(0);
   const [visibleChip, setVisibleChip] = useState<number | null>(null);
 
-  const activeIdx = tabs.findIndex((t) => t.id === activeId);
-  const active = tabs[activeIdx];
+  const activeGroup = groups.find((g) => g.id === activeGroupId)!;
+  const activeTabIdx = activeGroup.tabs.findIndex((t) => t.id === activeTabId);
+  const activeTab = activeGroup.tabs[activeTabIdx] ?? activeGroup.tabs[0];
 
-  useEffect(() => {
-    if (!isInView || visibleChip !== null) return;
-    const timer = setTimeout(() => {
-      setActiveId(tabs[(activeIdx + 1) % tabs.length].id);
-      setLoadKey((k) => k + 1);
-    }, LOAD_DURATION);
-    return () => clearTimeout(timer);
-  }, [activeId, isInView, visibleChip]);
+  // Switch group → reset ke tab pertama group baru
+  const handleGroupClick = (groupId: string) => {
+    const group = groups.find((g) => g.id === groupId)!;
+    setActiveGroupId(groupId);
+    setActiveTabId(group.tabs[0].id);
+    setLoadKey((k) => k + 1);
+    setVisibleChip(null);
+  };
 
-  useEffect(() => {
-    if (visibleChip === null) return;
-    const timer = setTimeout(() => setVisibleChip(null), CHIP_DURATION);
-    return () => clearTimeout(timer);
-  }, [visibleChip]);
-
-  const handleTabClick = (id: string) => {
-    setActiveId(id);
+  const handleTabClick = (tabId: string) => {
+    setActiveTabId(tabId);
     setLoadKey((k) => k + 1);
     setVisibleChip(null);
   };
@@ -223,54 +248,113 @@ export function SolutionSection() {
   const handleChipToggle = (pi: number) =>
     setVisibleChip((prev) => (prev === pi ? null : pi));
 
+  // Auto-advance tab dalam group
+  useEffect(() => {
+    if (!isInView || visibleChip !== null) return;
+    const timer = setTimeout(() => {
+      const nextIdx = (activeTabIdx + 1) % activeGroup.tabs.length;
+      setActiveTabId(activeGroup.tabs[nextIdx].id);
+      setLoadKey((k) => k + 1);
+    }, LOAD_DURATION);
+    return () => clearTimeout(timer);
+  }, [activeTabId, activeGroupId, isInView, visibleChip]);
+
+  // Auto-close chip
+  useEffect(() => {
+    if (visibleChip === null) return;
+    const timer = setTimeout(() => setVisibleChip(null), CHIP_DURATION);
+    return () => clearTimeout(timer);
+  }, [visibleChip]);
+
   return (
     <section
       ref={ref}
       id="solution"
       className="py-28 px-6 bg-neo-dark-gray overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="grid gap-12 mb-16">
+      <div className="max-w-7xl mx-auto space-y-10">
+        {/* Header */}
+        <div className="grid gap-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-2"
           >
             <span className="text-neo-yellow text-xs font-bold tracking-[0.3em] uppercase block mb-5">
               {t("tag")}
             </span>
-            <div className="flex flex-col md:flex-row justify-between gap-6 w-full">
-              <h2 className="max-w-sm font-display font-medium text-2xl md:text-3xl lg:text-4xl leading-tight text-white">
-                {t("title1")}
-                <span className="text-neo-yellow">{t("title2")}</span>
-              </h2>
-              <div className="max-w-md text-neo-white text-sm leading-relaxed">
-                {t("desc")}
-              </div>
+            <div className="max-w-md text-neo-white text-sm leading-relaxed">
+              {t("desc")}
             </div>
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-32 items-start">
+        {/* Group selector */}
+        <div className="flex w-full justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            {/* Desktop */}
+            <div className="hidden md:flex items-center justify-center px-6 py-4 gap-2">
+              {groups.map((group) => (
+                <button
+                  key={group.id}
+                  onClick={() => handleGroupClick(group.id)}
+                  className={`text-base font-medium rounded-lg px-6 py-3 transition-all duration-200 min-w-[210px] ${
+                    activeGroupId === group.id
+                      ? "bg-neo-yellow text-[#4B5563]"
+                      : "text-white hover:text-gray-300"
+                  }`}
+                >
+                  {group.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile */}
+            <GroupDropdown
+              groups={groups}
+              activeGroupId={activeGroupId}
+              handleGroupClick={handleGroupClick}
+            />
+          </motion.div>
+        </div>
+
+        {/* Body */}
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-32 items-start">
+          {/* Accordion */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex flex-col"
           >
-            {tabs.map((tab) => (
-              <TabItem
-                key={tab.id}
-                tab={tab}
-                isOpen={activeId === tab.id}
-                loadKey={loadKey}
-                paused={visibleChip !== null}
-                onTabClick={() => handleTabClick(tab.id)}
-              />
-            ))}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeGroupId}
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -16 }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-col"
+              >
+                {activeGroup.tabs.map((tab) => (
+                  <TabItem
+                    key={tab.id}
+                    tab={tab}
+                    isOpen={activeTabId === tab.id}
+                    loadKey={loadKey}
+                    paused={visibleChip !== null}
+                    onTabClick={() => handleTabClick(tab.id)}
+                  />
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </motion.div>
 
+          {/* Image + pins */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -279,7 +363,7 @@ export function SolutionSection() {
           >
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeId}
+                key={`${activeGroupId}-${activeTabId}`}
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
@@ -287,17 +371,17 @@ export function SolutionSection() {
                 className="relative aspect-square lg:aspect-[4/3]"
               >
                 <Image
-                  src={SOLUTION_IMAGES[activeId]}
-                  alt={active.title}
+                  src={activeTab.image}
+                  alt={activeTab.label}
                   fill
-                  className="object-contain"
+                  className="object-contain lg:scale-110"
                 />
 
-                {INFO_BUTTONS.map((btn, pi) => (
+                {activeTab.infoButtons.map((btn, pi) => (
                   <InfoPin
-                    key={pi}
+                    key={`${activeGroupId}-${activeTabId}-${pi}`}
                     config={btn}
-                    product={active.products[pi]}
+                    product={activeTab.products[pi]}
                     isOpen={visibleChip === pi}
                     onToggle={() => handleChipToggle(pi)}
                   />

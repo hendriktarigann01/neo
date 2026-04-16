@@ -10,7 +10,7 @@
     "headline1": "Smart Display",
     "headline2": "Solutions",
     "headline3": "for Every Business Space",
-    "subtitle": "Transform your environment with our custom-designed integrated LED and LCD solutions — we deliver a complete visual ecosystem tailored to your space.",
+    "subtitle": "Transform your environment with our custom - designed integrated LED and LCD solutions - we deliver a complete visual ecosystem tailored to your space.",
     "ctaPrimary": "Explore Bundle Packages",
     "ctaSecondary": "Consultation"
   },
@@ -43,60 +43,377 @@
     "title1": "Solutions Built as Complete",
     "title2": "Visual Ecosystems",
     "desc": "Each solution is structured as a curated bundle combining LED, LCD, and supporting systems into a unified experience designed for specific environments.",
-    "tabs": [
+    "groups": [
       {
-        "id": "cafe",
-        "label": "Cafe & Shop",
-        "title": "Dynamic Menu & Retail Experience",
-        "desc": "Capture attention and drive sales with vibrant digital menu boards and promotional displays tailored to your F&B or retail environment.",
-        "products": [
-          { "name": "LCD Menu Board", "sub": "Dynamic menu & promotions" },
+        "id": "collaboration",
+        "label": "Collaboration Series",
+        "tabs": [
           {
-            "name": "LED Poster Display",
-            "sub": "Storefront & window advertising"
+            "id": "corporate",
+            "label": "Corporate",
+            "desc": "Professional environments such as meeting rooms and boardrooms equipped with visual systems that support presentations, discussions, and hybrid collaboration.",
+            "products": [
+              {
+                "name": "Dual Speaker System",
+                "sub": "Clear and balanced audio delivery"
+              },
+              {
+                "name":"Webcam",
+                "sub":"Hybrid learning & recording support"
+              },
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Main presentation & conferencing display"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "43%",
+                "left": "12%"
+              },
+              {
+                "icon": "/icons/camera.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "13%",
+                "left": "28%"
+              },
+              {
+                "icon": "/icons/person.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "20%",
+                "left": "38%"
+              }
+            ],
+            "image": "/solutions/corporate.webp"
+          },
+          {
+            "id": "education",
+            "label": "Education",
+            "desc": "Learning spaces enhanced with interactive and visual technologies to improve engagement, knowledge delivery, and student participation.",
+            "products": [
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Main presentation & conferencing display"
+              },
+              {
+                "name": "Webcam",
+                "sub": "Classroom scheduling & announcements"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/person.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "28%",
+                "left": "13%"
+              },
+              {
+                "icon": "/icons/camera.svg",
+
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "12%",
+                "left": "30%"
+              }
+            ],
+            "image": "/solutions/education.webp"
           }
         ]
       },
       {
-        "id": "meeting",
-        "label": "Meeting Room",
-        "title": "Smart Meeting & Collaboration Space",
-        "desc": "Elevate productivity with interactive displays and seamless AV integration. Every meeting space becomes a high-performance communication hub.",
-        "products": [
+        "id": "commercial",
+        "label": "Commercial",
+        "tabs": [
           {
-            "name": "Interactive LED Panel",
-            "sub": "Wireless presentation & collaboration"
+            "id": "coffee",
+            "label": "F&B",
+            "desc": "Dining environments supported by digital menus and promotional displays that improve ordering experience",
+            "products": [
+              { "name": "LCD Menu Board", "sub": "Dynamic menu & promotions" },
+              {
+                "name": "LED Poster Display",
+                "sub": "Storefront & window advertising"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "15%",
+                "left": "45%"
+              },
+              {
+                "icon": "/icons/food.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "27%",
+                "left": "20%"
+              }
+            ],
+            "image": "/solutions/coffee.webp"
           },
-          { "name": "LCD Display", "sub": "Room scheduling & status board" }
+          {
+            "id": "worship",
+            "label": "Place of Worship",
+            "desc": "Spaces designed for clear communication and visibility during services, ensuring messages and content are accessible to all attendees.",
+            "products": [
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Main sermon/announcement visibility"
+              },
+              {
+                "name": "Digital Signage",
+                "sub": "Announcements & event updates"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "70%",
+                "left": "42%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "65%",
+                "left": "77%"
+              }
+            ],
+            "image": "/solutions/worship.webp"
+          },
+          {
+            "id": "retail",
+            "label": "Retail",
+            "desc": "Store environments enhanced with visual displays to attract attention, showcase products, and influence purchasing decisions.",
+            "products": [
+              {
+                "name": "LED Banner / Storefront Display",
+                "sub": "Highlight promo, tenant info"
+              },
+              {
+                "name": "LED Facade Display",
+                "sub": "Core branding & standout content"
+              },
+              {
+                "name": "Mobile LED Display",
+                "sub": "Mobile campaign / activation / event promotion"
+              },
+              {
+                "name": "LED Billboard (Outdoor Standalone)",
+                "sub": "External advertising / attracting visitors from outside the region"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/question-mark.svg",
+                "bg": "#FEF3C7",
+                "dot": "#F59E0B",
+                "top": "45%",
+                "left": "18%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "58%",
+                "left": "33%"
+              },
+              {
+                "icon": "/icons/shipping.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "78%",
+                "left": "53%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "38%",
+                "left": "74%"
+              }
+            ],
+            "image": "/solutions/retail.webp"
+          },
+          {
+            "id": "health",
+            "label": "Health",
+            "desc": "Healthcare environments utilizing digital displays for information, queue management, and patient communication.",
+            "products": [
+              {
+                "name": "Digital Signage",
+                "sub": "Information & announcements"
+              },
+              {
+                "name": "Smart TV",
+                "sub": "Queue Management, Service information"
+              },
+              {
+                "name": "Stretched LED",
+                "sub": "Announcements & advertising"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "27%",
+                "left": "30%"
+              },
+              {
+                "icon": "/icons/clock.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "30%",
+                "left": "57%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "42%",
+                "left": "83%"
+              }
+            ],
+            "image": "/solutions/health.webp"
+          }
         ]
       },
+      {
+        "id": "public",
+        "label": "Public Space",
+        "tabs": [
+          {
+            "id": "transportation",
+            "label": "Transportation",
+            "desc": "Transit environments that require real-time information systems for schedules, directions, and passenger communication.",
+            "products": [
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Real-time schedule & information board"
+              },
+              {
+                "name": "Digital Signage",
+                "sub": "Real-time schedule & information board"
+              },
+              { "name": "Wayfinding Display", "sub": "Navigation guidance" },
+              { "name": "LCD Standfloor", "sub": "Advertising & announcements" }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "45%",
+                "left": "10%"
+              },
+              {
+                "icon": "/icons/megaphone2.svg",
+                "bg": "#FEF9C3",
+                "dot": "#FACC15",
+                "top": "50%",
+                "left": "83%"
+              },
+              {
+                "icon": "/icons/direction.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "80%",
+                "left": "70%"
+              },
+              {
+                "icon": "/icons/discount.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "75%",
+                "left": "35%"
+              }
+            ],
+            "image": "/solutions/transportation.webp"
+          },
+          {
+            "id": "lobby",
+            "label": "Lobby",
+            "desc": "Entrance and reception areas enhanced with visual displays to deliver information, branding, and first impressions.",
+            "products": [
+              { "name": "Stretched LED", "sub": "Announcements & advertising" },
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Branding & visual impact"
+              },
+              {
+                "name": "Digital Signage",
+                "sub": "Information & announcements"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "50%",
+                "left": "10%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "20%",
+                "left": "30%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "32%",
+                "left": "80%"
+              }
+            ],
+            "image": "/solutions/lobby.webp"
+          },
+          {
+            "id": "ticketing",
+            "label": "Ticketing",
+            "desc": "Service areas equipped with digital systems to manage queues, display information, and streamline customer flow.",
+            "products": [
+              {
+                "name": "Digital Signage",
+                "sub": "Ticketing automation"
+              },
+              {
+                "name": "Smart TV",
+                "sub": "Queue Management, Service information"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/ticket.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "67%",
+                "left": "20%"
+              },
 
-      {
-        "id": "station",
-        "label": "Station",
-        "title": "Transportation & Public Information Hub",
-        "desc": "Enable clear, real-time communication in high-traffic environments through strategically placed digital displays that deliver information and content seamlessly.",
-        "products": [
-          {
-            "name": "LED Indoor Display",
-            "sub": "Real-time schedule & information board"
-          },
-          { "name": "LCD Floor Stand", "sub": "Advertising & announcements" }
-        ]
-      },
-      {
-        "id": "retail",
-        "label": "Retail",
-        "title": "Immersive Retail Visual Experience",
-        "desc": "Transform your retail floor with large-format LED displays and strategic digital signage that guides customers and amplifies your brand.",
-        "products": [
-          {
-            "name": "LED Video Wall",
-            "sub": "Brand storytelling & product showcase"
-          },
-          {
-            "name": "LCD Standfloor",
-            "sub": "In-aisle promotions & wayfinding"
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "40%",
+                "left": "75%"
+              }
+            ],
+            "image": "/solutions/ticketing.webp"
           }
         ]
       }
@@ -158,6 +475,12 @@
   "footer": {
     "tagline": "Architecting Tomorrow's Legacy",
     "copyright": "© 2026 NEO. All rights reserved.",
-    "links": ["Why Neo", "Solutions", "How It Works", "Products", "Consultation"]
+    "links": [
+      "Why Neo",
+      "Solutions",
+      "How It Works",
+      "Products",
+      "Consultation"
+    ]
   }
 }

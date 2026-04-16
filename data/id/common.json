@@ -10,7 +10,7 @@
     "headline1": "Solusi Display",
     "headline2": "Cerdas",
     "headline3": "untuk Setiap Ruang Bisnis",
-    "subtitle": "Transformasi lingkungan Anda dengan solusi LED dan LCD terintegrasi yang kami rancang khusus — ekosistem visual lengkap sesuai kebutuhan ruang Anda.",
+    "subtitle": "Transformasi lingkungan Anda dengan solusi LED dan LCD terintegrasi yang kami rancang khusus ekosistem visual lengkap sesuai kebutuhan ruang Anda.",
     "ctaPrimary": "Jelajahi Paket Bundle",
     "ctaSecondary": "Konsultasi"
   },
@@ -43,54 +43,388 @@
     "title1": "Solusi Dibangun sebagai",
     "title2": "Ekosistem Visual Lengkap",
     "desc": "Setiap solusi disusun sebagai paket terkurasi yang menggabungkan LED, LCD, dan sistem pendukung menjadi pengalaman terpadu untuk lingkungan tertentu.",
-    "tabs": [
+    "groups": [
       {
-        "id": "cafe",
-        "label": "Kafe & Toko",
-        "title": "Menu Digital & Pengalaman Ritel Dinamis",
-        "desc": "Tampilkan menu dan promosi dengan papan digital yang menarik perhatian dan mendorong penjualan.",
-        "products": [
-          { "name": "LCD Menu Board", "sub": "Menu dinamis & promosi" },
-          { "name": "LED Poster Display", "sub": "Iklan etalase & jendela" }
+        "id": "collaboration",
+        "label": "Collaboration Series",
+        "tabs": [
+          {
+            "id": "corporate",
+            "label": "Korporat",
+            "desc": "Lingkungan profesional seperti ruang rapat dan boardroom yang dilengkapi sistem visual untuk mendukung presentasi, diskusi, dan kolaborasi hybrid.",
+            "products": [
+              {
+                "name": "Sistem Speaker Dual",
+                "sub": "Pengiriman audio yang jernih dan seimbang"
+              },
+              {
+                "name": "Webcam",
+                "sub": "Dukungan pembelajaran & perekaman hybrid"
+              },
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Layar presentasi & konferensi utama"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "43%",
+                "left": "12%"
+              },
+              {
+                "icon": "/icons/camera.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "13%",
+                "left": "28%"
+              },
+              {
+                "icon": "/icons/person.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "20%",
+                "left": "38%"
+              }
+            ],
+            "image": "/solutions/corporate.webp"
+          },
+          {
+            "id": "education",
+            "label": "Pendidikan",
+            "desc": "Ruang belajar yang ditingkatkan dengan layar interaktif dan alat digital untuk meningkatkan keterlibatan siswa dan metode pembelajaran modern.",
+            "products": [
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Layar presentasi & konferensi utama"
+              },
+              {
+                "name": "Webcam",
+                "sub": "Dukungan kelas & komunikasi visual"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/person.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "28%",
+                "left": "13%"
+              },
+              {
+                "icon": "/icons/camera.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "12%",
+                "left": "30%"
+              }
+            ],
+            "image": "/solutions/education.webp"
+          }
         ]
       },
       {
-        "id": "meeting",
-        "label": "Ruang Rapat",
-        "title": "Ruang Rapat & Kolaborasi Cerdas",
-        "desc": "Tingkatkan produktivitas dengan display interaktif dan integrasi AV yang mulus di setiap ruang rapat.",
-        "products": [
+        "id": "commercial",
+        "label": "Komersial",
+        "tabs": [
           {
-            "name": "Panel LED Interaktif",
-            "sub": "Presentasi & kolaborasi nirkabel"
+            "id": "coffee",
+            "label": "F&B",
+            "desc": "Lingkungan makanan & minuman yang didukung menu digital dan display promosi untuk meningkatkan pengalaman pelanggan.",
+            "products": [
+              {
+                "name": "LCD Menu Board",
+                "sub": "Menu dinamis & promosi"
+              },
+              {
+                "name": "LED Poster Display",
+                "sub": "Iklan etalase & jendela"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "15%",
+                "left": "45%"
+              },
+              {
+                "icon": "/icons/food.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "27%",
+                "left": "20%"
+              }
+            ],
+            "image": "/solutions/coffee.webp"
           },
-          { "name": "LCD Display", "sub": "Penjadwalan ruangan & papan status" }
+          {
+            "id": "worship",
+            "label": "Rumah Ibadah",
+            "desc": "Lingkungan ibadah dengan sistem layar untuk mendukung ceramah, pengumuman, dan tampilan informasi yang jelas.",
+            "products": [
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Layar utama ceramah & pengumuman"
+              },
+              {
+                "name": "Digital Signage",
+                "sub": "Informasi & pembaruan acara"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "70%",
+                "left": "42%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "65%",
+                "left": "77%"
+              }
+            ],
+            "image": "/solutions/worship.webp"
+          },
+          {
+            "id": "retail",
+            "label": "Ritel",
+            "desc": "Lingkungan toko dengan display visual untuk menarik perhatian, memamerkan produk, dan meningkatkan penjualan.",
+            "products": [
+              {
+                "name": "LED Banner / Storefront Display",
+                "sub": "Promosi & informasi toko"
+              },
+              {
+                "name": "LED Facade Display",
+                "sub": "Branding utama & visual menarik"
+              },
+              {
+                "name": "Mobile LED Display",
+                "sub": "Promosi event & kampanye bergerak"
+              },
+              {
+                "name": "LED Billboard (Outdoor Standalone)",
+                "sub": "Iklan luar ruang"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/question-mark.svg",
+                "bg": "#FEF3C7",
+                "dot": "#F59E0B",
+                "top": "45%",
+                "left": "18%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "58%",
+                "left": "33%"
+              },
+              {
+                "icon": "/icons/shipping.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "78%",
+                "left": "53%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "38%",
+                "left": "74%"
+              }
+            ],
+            "image": "/solutions/retail.webp"
+          },
+          {
+            "id": "health",
+            "label": "Kesehatan",
+            "desc": "Lingkungan kesehatan dengan sistem layar untuk informasi, antrean, dan komunikasi pasien.",
+            "products": [
+              {
+                "name": "Digital Signage",
+                "sub": "Informasi & pengumuman"
+              },
+              {
+                "name": "Smart TV",
+                "sub": "Manajemen antrean & informasi layanan"
+              },
+              {
+                "name": "Stretched LED",
+                "sub": "Pengumuman & promosi"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "27%",
+                "left": "30%"
+              },
+              {
+                "icon": "/icons/clock.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "30%",
+                "left": "57%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "42%",
+                "left": "83%"
+              }
+            ],
+            "image": "/solutions/health.webp"
+          }
         ]
       },
       {
-        "id": "station",
-        "label": "Stasiun",
-        "title": "Hub Informasi Transportasi & Publik",
-        "desc": "Komunikasi real-time yang jelas di lingkungan lalu lintas tinggi melalui display digital yang ditempatkan strategis.",
-        "products": [
+        "id": "public",
+        "label": "Ruang Publik",
+        "tabs": [
           {
-            "name": "LED Display Indoor",
-            "sub": "Papan jadwal & informasi real-time"
+            "id": "transportation",
+            "label": "Transportasi",
+            "desc": "Lingkungan transportasi dengan sistem informasi real-time untuk jadwal, arah, dan komunikasi penumpang.",
+            "products": [
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Papan informasi & jadwal real-time"
+              },
+              {
+                "name": "Digital Signage",
+                "sub": "Papan informasi real-time"
+              },
+              {
+                "name": "Wayfinding Display",
+                "sub": "Panduan navigasi"
+              },
+              {
+                "name": "LCD Standfloor",
+                "sub": "Iklan & pengumuman"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "45%",
+                "left": "10%"
+              },
+              {
+                "icon": "/icons/megaphone2.svg",
+                "bg": "#FEF9C3",
+                "dot": "#FACC15",
+                "top": "50%",
+                "left": "83%"
+              },
+              {
+                "icon": "/icons/direction.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "80%",
+                "left": "70%"
+              },
+              {
+                "icon": "/icons/discount.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "75%",
+                "left": "35%"
+              }
+            ],
+            "image": "/solutions/transportation.webp"
           },
-          { "name": "LCD Floor Stand", "sub": "Iklan & pengumuman" }
-        ]
-      },
-      {
-        "id": "retail",
-        "label": "Ritel",
-        "title": "Pengalaman Visual Ritel yang Imersif",
-        "desc": "Transformasi lantai ritel Anda dengan LED display format besar dan signage digital strategis.",
-        "products": [
           {
-            "name": "LED Video Wall",
-            "sub": "Brand storytelling & showcase produk"
+            "id": "lobby",
+            "label": "Lobi",
+            "desc": "Area lobi dengan display visual untuk informasi, branding, dan pengalaman pertama pengunjung.",
+            "products": [
+              {
+                "name": "Stretched LED",
+                "sub": "Pengumuman & iklan"
+              },
+              {
+                "name": "LED Indoor Fixed Installation",
+                "sub": "Branding & visual utama"
+              },
+              {
+                "name": "Digital Signage",
+                "sub": "Informasi & pengumuman"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "50%",
+                "left": "10%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#FEE2E2",
+                "dot": "#F87171",
+                "top": "20%",
+                "left": "30%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "32%",
+                "left": "80%"
+              }
+            ],
+            "image": "/solutions/lobby.webp"
           },
-          { "name": "LCD Standfloor", "sub": "Promosi lorong & panduan arah" }
+          {
+            "id": "ticketing",
+            "label": "Tiketing",
+            "desc": "Area layanan dengan sistem layar digital untuk antrean, informasi, dan alur pelanggan.",
+            "products": [
+              {
+                "name": "Digital Signage",
+                "sub": "Otomatisasi tiket"
+              },
+              {
+                "name": "Smart TV",
+                "sub": "Manajemen antrean & informasi layanan"
+              }
+            ],
+            "infoButtons": [
+              {
+                "icon": "/icons/ticket.svg",
+                "bg": "#BFDBFE",
+                "dot": "#60A5FA",
+                "top": "67%",
+                "left": "20%"
+              },
+              {
+                "icon": "/icons/megaphone.svg",
+                "bg": "#BBF7D0",
+                "dot": "#4ADE80",
+                "top": "40%",
+                "left": "75%"
+              }
+            ],
+            "image": "/solutions/ticketing.webp"
+          }
         ]
       }
     ]
