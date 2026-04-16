@@ -20,7 +20,7 @@ import {
   Minus,
 } from "lucide-react";
 
-const LOAD_DURATION = 1000000;
+const LOAD_DURATION = 10000;
 const CHIP_DURATION = 5000;
 
 const TAB_ICONS: Record<string, React.ElementType> = {
