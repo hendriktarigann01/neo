@@ -5,14 +5,18 @@ export default function Dropdown({
   groups,
   activeGroupId,
   handleGroupClick,
+}: {
+  groups: Array<{ id: string; label: string }>;
+  activeGroupId: string;
+  handleGroupClick: (id: string) => void;
 }) {
   const [open, setOpen] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   // close kalau klik di luar
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false);
       }
     };
